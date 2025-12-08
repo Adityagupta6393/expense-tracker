@@ -5,12 +5,12 @@ export default function ExpenseList() {
   const [expenses, setExpenses] = useState([]);
 
   const fetchExpenses = async () => {
-    const res = await axios.get("http://localhost:5000/expenses");
+    const res = await axios.get("https://expense-tracker-backend-neml.onrender.com/expenses");
     setExpenses(res.data);
   };
 
   const deleteExpense = async (id) => {
-    await axios.delete(`http://localhost:5000/expense/${id}`);
+    await axios.delete(`https://expense-tracker-backend-neml.onrender.com/expense/${id}`);
     fetchExpenses();
   };
 

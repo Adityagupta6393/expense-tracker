@@ -8,7 +8,7 @@ import './App.css';
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, ArcElement);
 
-const API_BASE = process.env.REACT_APP_API_BASE || 'http://localhost:5000';
+const API_BASE = process.env.REACT_APP_API_BASE || 'https://expense-tracker-backend-neml.onrender.com';
 
 function Sidebar({ onNav, active }){
   return (

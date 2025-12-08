@@ -8,7 +8,7 @@ export default function AddExpense() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:5000/add", { title, amount, category });
+    await axios.post("https://expense-tracker-backend-neml.onrender.com/add", { title, amount, category });
     alert("Expense Added!");
     setTitle(""); setAmount(""); setCategory("");
   };
