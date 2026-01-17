@@ -13,7 +13,7 @@ app.use(express.json());
 // Connect MongoDB
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('MongoDB Connected'))
-  .catch(err => console.log(err));
+  .catch(err => console.log('MongoDB not connected',err));
 
 // Routes
 app.post('/add', async (req, res) => {
