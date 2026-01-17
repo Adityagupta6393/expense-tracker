@@ -26,6 +26,7 @@ app.post('/add', async (req, res) => {
 app.get('/expenses', async (req, res) => {
   const expenses = await Expense.find();
   res.json(expenses);
+  
 });
 
 app.delete('/expense/:id', async (req, res) => {
